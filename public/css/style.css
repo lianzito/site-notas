@@ -1,0 +1,102 @@
+:root {
+    --bg-color-light: #f8f9fa;
+    --text-color-light: #212529;
+    --card-bg-color-light: #ffffff;
+    --input-bg-color-light: #fff;
+
+    --bg-color-dark: #212529;
+    --text-color-dark: #e9ecef;
+    --card-bg-color-dark: #343a40;
+    --input-bg-color-dark: #495057;
+}
+
+body {
+    background-color: var(--bg-color-light);
+    color: var(--text-color-light);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+body.dark-mode {
+    background-color: var(--bg-color-dark);
+    color: var(--text-color-dark);
+}
+
+body.dark-mode .card-body,
+body.dark-mode .modal-content,
+body.dark-mode .dropdown-menu,
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4,
+body.dark-mode h5,
+body.dark-mode p,
+body.dark-mode label,
+body.dark-mode .form-label,
+body.dark-mode .alert,
+body.dark-mode .card-title,
+body.dark-mode .card-text {
+    color: var(--text-color-dark) !important;
+}
+
+body.dark-mode .card,
+body.dark-mode .modal-content,
+body.dark-mode .dropdown-menu {
+    background-color: var(--card-bg-color-dark);
+}
+
+body.dark-mode .form-control {
+    background-color: var(--input-bg-color-dark) !important;
+    color: var(--text-color-dark) !important;
+    border-color: #6c757d;
+}
+
+
+.note-card.pinned .card-title::before {
+    content: '\F4ED';
+    font-family: 'bootstrap-icons';
+    font-weight: bold;
+    margin-right: 8px;
+    color: #0d6efd;
+}
+
+.fab {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 1050;
+}
+
+.note-colors {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+.color-dot {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 1px solid #ccc;
+}
+.color-dot.selected {
+    border: 2px solid #0d6efd;
+}
+
+body.dark-mode .note-card .card-title,
+body.dark-mode .note-card .card-text {
+    color: var(--text-color-light) !important; 
+}
+
+body.dark-mode .alert.alert-success {
+    background-color: #0f5132;
+    color: #a3cfbb !important;
+    border-color: #0a3622;
+}
+
+body.dark-mode .alert.alert-danger {
+    background-color: #842029;
+    color: #f5c2c7 !important;
+    border-color: #5f171e;
+}
