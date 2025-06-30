@@ -1,8 +1,10 @@
 **Notas MVC**
+
 Notas MVC é uma aplicação web completa para gerenciamento de notas pessoais, desenvolvida em PHP puro com o padrão arquitetural Model-View-Controller (MVC). O projeto foi criado com o objetivo de demonstrar uma implementação robusta, segura e com uma interface moderna e interativa.
 
-** Funcionalidades**
-** Autenticação Segura**
+**Funcionalidades**
+**Autenticação Segura**
+
 Registro e login com hashing de senhas (password_hash) e controle de sessões.
 
 **Gerenciamento de Notas (CRUD)**
@@ -13,16 +15,16 @@ Visualização em layout de grade
 
 Exclusão permanente de notas
 
-**Organização Avançada
-**
+**Organização Avançada**
+
 Arquivar: Mantenha o ambiente limpo ao mover notas para uma seção de arquivadas
 
 Fixar Notas: Destaque notas importantes no topo
 
 Cores Personalizadas: Classifique visualmente com cores diferentes
 
-**Interface Interativa
-**
+**Interface Interativa**
+
 Modo Escuro: Alternância entre tema claro e escuro com persistência no navegador
 
 Busca Dinâmica: Filtro instantâneo por título ou conteúdo (sem recarregar a página)
@@ -31,7 +33,8 @@ Ações via AJAX: Arquivamento e exclusão sem reload
 
 Perfil de Usuário: Atualização de dados pessoais e senha
 
-** Arquitetura e Tecnologias Arquitetura MVC**
+**Arquitetura e Tecnologias Arquitetura MVC**
+
 Model: Acesso ao banco via PDO, com uso de prepared statements para segurança contra SQL Injection.
 
 View: Camada de apresentação dinâmica, separando lógica da interface.
@@ -61,6 +64,7 @@ TinyMCE
 Bootstrap Icons
 
 **Como Executar o Projeto**
+
 1. Clone o repositório
 bash
 Copiar
