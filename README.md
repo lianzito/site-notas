@@ -1,85 +1,94 @@
 **Notas MVC**
-Notas MVC é uma aplicação web completa para gerenciamento de notas pessoais, desenvolvida em PHP puro seguindo o padrão arquitetural Model-View-Controller (MVC). O projeto foi criado para demonstrar a implementação de um sistema robusto, seguro e com uma interface de usuário moderna e interativa.
+Notas MVC é uma aplicação web completa para gerenciamento de notas pessoais, desenvolvida em PHP puro com o padrão arquitetural Model-View-Controller (MVC). O projeto foi criado com o objetivo de demonstrar uma implementação robusta, segura e com uma interface moderna e interativa.
 
-**Funcionalidades Principais**
-O sistema oferece uma gama completa de funcionalidades para uma experiência de usuário rica e eficiente:
+** Funcionalidades**
+** Autenticação Segura**
+Registro e login com hashing de senhas (password_hash) e controle de sessões.
 
-Autenticação Segura: Sistema completo de Registro e Login com hashing de senhas (password_hash) e controle de sessão.
+**Gerenciamento de Notas (CRUD)**
 
-Gerenciamento de Notas (CRUD):
+Criação e edição com editor de texto rico (TinyMCE)
 
-Criação e Edição com editor de texto rico (TinyMCE).
+Visualização em layout de grade
 
-Visualização em layout de grade.
+Exclusão permanente de notas
 
-Exclusão permanente de notas.
+**Organização Avançada
+**
+Arquivar: Mantenha o ambiente limpo ao mover notas para uma seção de arquivadas
 
-Organização Avançada:
+Fixar Notas: Destaque notas importantes no topo
 
-Arquivamento: Mova notas para uma seção de arquivadas para manter sua área de trabalho limpa.
+Cores Personalizadas: Classifique visualmente com cores diferentes
 
-Fixar Notas: Marque notas importantes para que sempre apareçam no topo.
+**Interface Interativa
+**
+Modo Escuro: Alternância entre tema claro e escuro com persistência no navegador
 
-Cores Personalizadas: Atribua cores a cada nota para uma melhor organização visual.
+Busca Dinâmica: Filtro instantâneo por título ou conteúdo (sem recarregar a página)
 
-Interface Interativa:
+Ações via AJAX: Arquivamento e exclusão sem reload
 
-Modo Escuro (Dark Mode): Alterne entre temas claro e escuro, com a preferência salva no navegador.
+Perfil de Usuário: Atualização de dados pessoais e senha
 
-Busca Dinâmica: Filtre notas instantaneamente por título ou conteúdo sem recarregar a página.
+** Arquitetura e Tecnologias Arquitetura MVC**
+Model: Acesso ao banco via PDO, com uso de prepared statements para segurança contra SQL Injection.
 
-Ações via AJAX: Arquive e exclua notas com uma experiência fluida, sem a necessidade de recarregar a página.
+View: Camada de apresentação dinâmica, separando lógica da interface.
 
-Gerenciamento de Perfil: Os usuários podem atualizar suas informações pessoais e alterar a senha.
+Controller: Coordena a comunicação entre Model e View.
 
-Arquitetura e Tecnologias
-O projeto é construído sobre uma base sólida que promove organização, segurança e escalabilidade.
+Roteamento: Arquivo App.php gerencia e direciona as requisições para os controladores e métodos corretos.
 
-**Arquitetura MVC**
-Model: Camada de dados que interage com o banco de dados via PDO, utilizando prepared statements para prevenir injeção de SQL.
+**Tecnologias Utilizadas
+Back-End**
+PHP
 
-View: Camada de apresentação que renderiza a UI com dados dinâmicos.
+MySQL ou MariaDB
 
-Controller: Camada de controle que orquestra o fluxo de dados entre os Models e as Views.
-
-Roteador: Um roteador simples (App.php) lida com as requisições, direcionando-as para o controller e método apropriados.
-
-**Tecnologias Utilizadas**
-**Back-End**
-
-PHP, MySQL (ou MariaDB), PDO
+PDO
 
 **Front-End**
+HTML5, CSS3, JavaScript (ES6)
 
-HTML5, CSS3, JavaScript (ES6), AJAX (Fetch API)
+AJAX com Fetch API
 
-Frameworks & Libs
+**Bibliotecas & Frameworks**
+Bootstrap 5
 
-Bootstrap 5, TinyMCE, Bootstrap Icons
+TinyMCE
+
+Bootstrap Icons
 
 **Como Executar o Projeto**
-Clone o repositório:
-
-Bash
-
+1. Clone o repositório
+bash
+Copiar
+Editar
 git clone https://github.com/seu-usuario/notas-mvc.git
 cd notas-mvc
-Banco de Dados:
+2. Banco de Dados
+Crie um banco chamado notas_mvc.
 
-Crie um banco de dados com o nome notas_mvc.
+Importe o arquivo notas_mvc.sql que está na raiz do projeto.
 
-Importe o arquivo notas_mvc.sql para criar as tabelas e inserir dados iniciais.
-
-Configuração:
-
+3. Configuração
 Abra o arquivo config/config.php.
 
-Atualize as constantes DB_USER e DB_PASS com suas credenciais do banco de dados.
+Atualize os valores de DB_USER e DB_PASS com suas credenciais.
 
-Verifique se a URLROOT corresponde à URL do seu ambiente de desenvolvimento local (ex: http://localhost/notas-mvc).
+Verifique se a constante URLROOT corresponde ao caminho da aplicação no seu ambiente local (ex: http://localhost/notas-mvc).
 
-Servidor Local:
+4. Execute o servidor local
+Utilize uma das opções:
 
-Inicie um servidor local (XAMPP, WAMP, MAMP ou o servidor embutido do PHP) na raiz do projeto.
+XAMPP / WAMP / MAMP
 
-Pronto! Agora você pode acessar a aplicação no seu navegador.
+Ou o servidor embutido do PHP:
+
+bash
+Copiar
+Editar
+php -S localhost:8000 -t public
+Pronto! Acesse a aplicação pelo navegador e comece a organizar suas notas! ✨
+
